@@ -10,7 +10,7 @@ testProductDisponibile = "https://www.unieuro.it/online/iPad/iPad-Pro-pidAPLMPF1
 
 
 fromaddr = "iPadAvailabilityChecker@gmail.com"
-toaddr = "realini.edoardo@gmail.com"
+toaddr = "your gmail address here"
 msg = MIMEMultipart()
 msg['From'] = fromaddr
 msg['To'] = toaddr
@@ -23,6 +23,6 @@ server = smtplib.SMTP('smtp.gmail.com', 587)
 server.ehlo()
 server.starttls()
 server.ehlo()
-server.login("softwarenotificationalert@gmail.com", "test.1234")
+server.login("your gmail address here", "your passwd")
 text = msg.as_string()
 server.sendmail(fromaddr, toaddr, text)
