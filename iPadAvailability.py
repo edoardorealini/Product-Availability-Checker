@@ -26,8 +26,8 @@ def checkAvailability(url):
 		for i in range(0,3):
 			os.system("beep -f 555 -l 200")
 
-		fromaddr = "softwarenotificationalert@gmail.com"
-		toaddr = "valcarenghi.valcarenghi@gmail.com"
+		fromaddr = "your gmail address"
+		toaddr = "here insert destination address, can be the same as fromaddr"
 		msg = MIMEMultipart()
 		msg['From'] = fromaddr
 		msg['To'] = toaddr
@@ -40,7 +40,7 @@ def checkAvailability(url):
 		server.ehlo()
 		server.starttls()
 		server.ehlo()
-		server.login("softwarenotificationalert@gmail.com", "test.1234")
+		server.login("your gmail address here", "your password")
 		text = msg.as_string()
 		server.sendmail(fromaddr, toaddr, text)
 
